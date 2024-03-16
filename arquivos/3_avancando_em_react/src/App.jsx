@@ -4,10 +4,11 @@ import ConditionalRender from "./components/ConditionalRender";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 import ShowUserName from "./components/ShowUserName";
+import CarDetails from "./components/CarDetails";
 
 function App() {
   const name = "Jonata";
-  const [userName] = useState("Maria")
+  const [userName] = useState("Maria");
   return (
     <div className="App">
       <h1>Avançando em React</h1>
@@ -32,8 +33,14 @@ function App() {
       <ManageData />
       <ListRender />
       <ConditionalRender />
+      {/*props*/}
       <ShowUserName name={userName} />
       <ShowUserName name={name} />
+      {/*destructuring*/}
+      <CarDetails brand="VW" km={1000} color="Azul" newCar={false}/>
+      {/*Reusing the component*/}
+      <CarDetails brand="Ford" km={1000} color="Vermelho" newCar={true} />
+      <CarDetails brand="Fiat" km={0} color="Branco" newCar={false}/>
     </div>
   );
 }

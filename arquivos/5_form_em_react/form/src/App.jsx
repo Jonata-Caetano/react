@@ -1,11 +1,11 @@
 import "./App.css";
-import MyForms from "./Components/MyForms";
+import MyForm from "./Components/MyForm";
 
 function App() {
   return (
     <div className="App">
       <h2>Forms</h2>
-      <MyForms />
+      <MyForm user={{ name: "Josias", email: "josias@hotmail.com" }} />
     </div>
   );
 }

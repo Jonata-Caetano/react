@@ -1,11 +1,12 @@
 import "./MyForm.css";
 import { useState } from "react";
 
-const MyForm = ({user}) => {
+const MyForm = ({ user }) => {
   // 6 -Controlled Input
   // 3 - Gerencinamento de dados
   const [name, setName] = useState(user ? user.name : "");
   const [email, setEmail] = useState(user ? user.email : "");
+  const [bio, setBio] = useState("");
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -14,11 +15,12 @@ const MyForm = ({user}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Enviando formulario");
-    console.log(name, email);
+    console.log(name, email, bio);
 
     // 7 - Limpar formulario
     setName("");
     setEmail("");
+    setBio("");
   };
 
   //console.log(name);
@@ -51,6 +53,16 @@ const MyForm = ({user}) => {
             value={email}
           />
         </label>
+        <label>
+          <span>Bio:</span>
+          <textarea
+            name="bio"
+            placeholder="Descrição do usuário"
+            onChange={(e) => setBio(e.target.value)}
+            value={bio}
+          ></textarea>
+        </label>
+        {/*8 - textarea*/}
         <input type="submit" value="Enviar" />
       </form>
     </div>

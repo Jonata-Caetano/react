@@ -13,6 +13,7 @@ const Game = ({
   guesses,
   score,
 }) => {
+  console.log("renderizou");
   const [letter, setLetter] = useState("");
   const letterInputRef = useRef(null);
 

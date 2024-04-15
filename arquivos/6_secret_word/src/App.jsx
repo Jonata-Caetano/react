@@ -108,6 +108,16 @@ function App() {
     }
   }, [guesses]);
 
+  // check win conditions
+  useEffect(() => {
+    const uniqueLetters = [...new Set(setLetters)];
+    //win conditions
+    if (guessedLetters.length === uniqueLetters.length) {
+      setScore((actualScore) => (actualScore += 100));
+      // restart game with new word
+    }
+  }, [guessedLetters]);
+
   const retry = () => {
     setScore(0);
     setGuesses(guessesQty);

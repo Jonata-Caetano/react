@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 // Components
 import StartScreen from "./components/StartScreen";
@@ -34,7 +34,7 @@ function App() {
 
   console.log(words);
 
-  const pickWordAndCategory = () => {
+  const pickWordAndCategory = useCallback(() => {
     // Pick a random category
     const categories = Object.keys(words);
     const category =
@@ -47,10 +47,11 @@ function App() {
     console.log(category, word);
 
     return { word, category };
-  };
+  }, [words]);
 
   // Start the game
-  const startGame = () => {
+  const startGame = useCallback(() => {
+    clearLetterStates();
     // Choose a word
     const { category, word } = pickWordAndCategory();
 
@@ -67,7 +68,7 @@ function App() {
     setLetters(wordLetters);
 
     setGameStage(stages[1].name);
-  };
+  }, [pickWordAndCategory]);
 
   // Process the letter input
   const verifyLetter = (letter) => {
@@ -116,7 +117,7 @@ function App() {
       setScore((actualScore) => (actualScore += 100));
       // restart game with new word
     }
-  }, [guessedLetters]);
+  }, [guessedLetters, letters, startGame]);
 
   const retry = () => {
     setScore(0);

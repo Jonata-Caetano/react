@@ -111,7 +111,7 @@ function App() {
 
   // check win conditions
   useEffect(() => {
-    const uniqueLetters = [...new Set(setLetters)];
+    const uniqueLetters = [...new Set(letters)];
     //win conditions
     if (guessedLetters.length === uniqueLetters.length) {
       setScore((actualScore) => (actualScore += 100));

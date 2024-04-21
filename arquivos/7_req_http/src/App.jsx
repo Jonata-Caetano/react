@@ -21,7 +21,30 @@ function App() {
   }, []);
 
   //2 - add de produtos
-  const handleSubmit = async (e) => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const product = {
+      name,
+      price,
+    };
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(product),
+    });
+
+    // 3 carregamento dinâmico
+    const addedProduct = await res.json();
+    setProducts((prevProducts) => [...prevProducts, addedProduct]);
+
+    setName("");
+    setPrice("");
+    setProducts((prevProducts) => [...prevProducts]);
+  };
+
   return (
     <div className="App">
       <h1>Lista de Produtos</h1>

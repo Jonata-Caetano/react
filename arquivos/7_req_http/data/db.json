@@ -1,19 +1,49 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Camisa",
-        "price": 59.9
-      },
-      {
-        "id": 2,
-        "name": "Calça vermelha",
-        "price": 90
-      },
-      {
-        "id": 3,
-        "name": "Boné aba reta",
-        "price": 29.9
-      }
-    ]
-  }
+  "products": [
+    {
+      "id": "1",
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": "2",
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": "3",
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "id": "ee00",
+      "name": "Camisa do Vasco",
+      "price": "200"
+    },
+    {
+      "id": "c4c8",
+      "name": "Calção do Vasco",
+      "price": "100"
+    },
+    {
+      "id": "f1ba",
+      "name": "Curso de React",
+      "price": "456"
+    },
+    {
+      "id": "3576",
+      "name": "maça",
+      "price": "2"
+    },
+    {
+      "id": "5eec",
+      "name": "TEste",
+      "price": "123"
+    },
+    {
+      "id": "3f65",
+      "name": "Pera",
+      "price": "12"
+    }
+  ]
+}

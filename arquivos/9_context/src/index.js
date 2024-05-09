@@ -8,8 +8,8 @@ import { CounterContextProvider } from "./context/CounterContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  {/* Criando provider*/}
   <React.StrictMode>
+    {/* Criando provider*/}
     <CounterContextProvider>
       <App />
     </CounterContextProvider>

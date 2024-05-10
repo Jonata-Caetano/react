@@ -23,14 +23,23 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <h1 style={{ color: color }}>Home</h1>
-      <p>Valor contador: {counter}</p>
-      {/* 3 - alterar o valor do contexto */}
+    <div className="about-container">
+    <h1 className="about-title" style={{ color: color }}>About</h1>
+    <p className="counter-value">Valor contador: {counter}</p>
       <ChangeCounter />
-      <div>
-        <button onClick={() => setTitleColor("RED")}>Vermelho</button>
-        <button onClick={() => setTitleColor("BLUE")}>Azul</button>
+      <div className="button-group">
+        <button
+          className="button button-red"
+          onClick={() => setTitleColor("RED")}
+        >
+          Vermelho
+        </button>
+        <button
+          className="button button-blue"
+          onClick={() => setTitleColor("BLUE")}
+        >
+          Azul
+        </button>
       </div>
     </div>
   );

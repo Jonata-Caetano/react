@@ -1,0 +1,93 @@
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os itens para uma aparência mais espaçada */
+    margin: 20px auto; /* Centraliza a seção de produtos */
+    padding: 10px;
+    max-width: 1200px; /* Limita a largura máxima para organizar melhor os itens */
+  }
+  
+  .products li {
+    border: 1px solid #efefef;
+    border-radius: 10px; /* Bordas arredondadas mais suaves */
+    padding: 15px 20px; /* Aumenta o padding para mais espaço interno */
+    text-align: center;
+    list-style: none;
+    width: calc(100% / 4 - 20px); /* Quatro itens por linha com espaçamento */
+    background-color: #fff; /* Cor de fundo branca */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar cada item */
+    transition: all 0.3s ease; /* Transição suave para os efeitos */
+  }
+  
+  .products li:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra mais forte ao passar o mouse */
+    transform: translateY(-4px); /* Leve efeito de elevação */
+    border-color: #dcdcdc; /* Muda a cor da borda ao passar o mouse */
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .products li {
+      width: calc(100% / 3 - 20px); /* Três itens por linha para telas menores */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .products li {
+      width: calc(100% / 2 - 20px); /* Dois itens por linha para telas ainda menores */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .products li {
+      width: 100%; /* Um item por linha para telas muito pequenas */
+    }
+  }
+
+  .button-group {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    justify-content: center;
+    margin: 20px 0; /* Espaçamento em torno dos botões */
+  }
+  
+  /* Estilo básico para todos os botões */
+  .button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px; /* Bordas arredondadas */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    transition: all 0.3s ease; /* Suave animação ao passar o mouse */
+  }
+  
+  /* Botão vermelho */
+  .button-red {
+    background-color: #e74c3c; /* Cor vermelha */
+    color: #ffffff; /* Texto branco */
+  }
+  
+  .button-red:hover {
+    background-color: #c0392b; /* Vermelho mais escuro ao passar o mouse */
+  }
+  
+  /* Botão azul */
+  .button-blue {
+    background-color: #3498db; /* Cor azul */
+    color: #ffffff; /* Texto branco */
+  }
+  
+  .button-blue:hover {
+    background-color: #2980b9; /* Azul mais escuro ao passar o mouse */
+  }
+
+  .counter-value {
+    font-size: 1.5rem; /* Tamanho adequado para legibilidade */
+    color: #666; /* Cor mais suave para textos não principais */
+    background-color: #f0f0f0; /* Fundo leve para destaque */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+  }
+  

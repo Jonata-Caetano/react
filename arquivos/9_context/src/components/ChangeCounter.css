@@ -1,0 +1,31 @@
+/* Container do botão */
+.counter-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Espaçamento ao redor do botão */
+  }
+  
+  /* Estilo do botão */
+  .counter-button {
+    padding: 12px 20px;
+    background-color: #ff9800; /* Laranja vivo */
+    color: #ffffff; /* Texto branco */
+    border: none;
+    border-radius: 8px; /* Bordas arredondadas */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    transition: all 0.3s ease; /* Transição suave */
+  }
+  
+  .counter-button:hover {
+    background-color: #fb8c00; /* Laranja mais escuro ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+    transform: translateY(-2px); /* Leve efeito de elevação */
+  }
+  
+  .counter-button:active {
+    transform: translateY(0); /* Remove elevação ao clicar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduz a sombra ao clicar */
+  }
+  

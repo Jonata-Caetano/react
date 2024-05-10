@@ -1,0 +1,26 @@
+/* Container geral para a página About */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos verticalmente */
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  /* Estilo para o título */
+  .about-title {
+    color: inherit; /* Utiliza a cor passada pelo contexto */
+    font-size: 2rem; /* Tamanho maior para o título */
+    margin-bottom: 15px; /* Espaçamento após o título */
+  }
+  
+  /* Estilo para o parágrafo do contador */
+  .counter-value {
+    font-size: 1.5rem; /* Tamanho adequado para legibilidade */
+    color: #666; /* Cor mais suave para textos não principais */
+    background-color: #f0f0f0; /* Fundo leve para destaque */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+  }
+  
